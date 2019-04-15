@@ -10,52 +10,58 @@
     <link rel="stylesheet" href="styles/styles.css">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans|Ubuntu" rel="stylesheet">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
     <title>GeoTrend</title>
 </head>
 <body id="bootstrap-override">
     <section class="landing-page">
-        <!-- <img src=https://i.imgur.com/OGbRDTG.jpg?1" alt="Background Hashtag Image"> -->
-        <div class="nav-content">
-                <div class="container navigation">
-                    <ul class="landing-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <!-- <li><a href="#">Pricing</a></li> -->
-                        <!-- <li><a href="#">Testimonials</a></li> -->
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div> <!-- END OF NAVIGATION -->
-            </div> <!-- END OF NAV CONTENT -->
+        <nav class="navigation">
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#">Login</a></li>
+              </ul>
+          </nav>
             <div class="search-content">
                     <img src="images/geotrend-logo.png" alt="Company Logo" class="expand">
-                    <p class="motto">Local Trends for Local Business</p>
-                    <input class="search" type="text" placeholder="Enter Location Here">
+                    <h5 class="motto">Local Trends for Local Businesses</h5>
                     <br>
-                    <br>
-                    <button class="search" id="searchBtn">Search</button>
+                    <p class="directions"> Use the search button below to find locally trending hashtags</p>
+                    <form id="search-bar">
+                        <input class="search" type="search">
+                        <button id="searchBtn"><i class="fa fa-search"></i></button>
+                    </form>
+                    
             </div> <!-- END OF SEARCH CONTENT -->
-            <div id="results"></div>
-            <div id="tweets"></div>
     </section> <!-- END OF LANDING PAGE -->
     
     <div id="about" class="text-center">
             <ul class="header-nav">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Something Else</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Login</a></li>
             </ul>
         <section class="container about-section">
-            <h1>About Us</h1>
-            <h3>Mission Statement</h3>
-            <p>Our mission is to quickly provide local businesses with the information they need on trending topics in their area to better focus their marketing strategies.</p>
-            <h3>About Us</h3>
-            <p>Founded in 2019 in Denver, CO, GeoTrend was created out of the neccesitiy to provide small businesses a more effecient way to focus their marketing strategy.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptas qui asperiores, praesentium eum esse fuga, minima illo consequatur sequi, at vel nobis necessitatibus ea rerum. A accusamus provident perspiciatis!</p>
+            <h1 class="info">Company Info</h1>
+          <div class="row">
+            <div class="col-6 mission">
+                <h3><i>Mission Statement</i></h3>
+                <p class="mission-state">Our mission is to quickly provide local businesses with the information they need on trending topics in their area to better focus their marketing strategies.</p>
+            </div> <!-- END OF MISSION COL -->
+            <div class="col-6 about-us">
+                <h3><i>About Us</i></h3>
+                <p class="about-us-info">Founded in 2019 in Denver, CO, GeoTrend was created out of the neccesitiy to provide small businesses a more effective way to focus their marketing strategy through trending topics on social media.</p>
+                <p class="about-us-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptas qui asperiores, praesentium eum esse fuga, minima illo consequatur sequi, at vel nobis necessitatibus ea rerum. A accusamus provident perspiciatis!</p>
+              </div> <!-- END OF ABOUT COL -->
+          </div> <!-- END OF ABOUT ROW -->
+            
             <hr>
             <!-- Employee Spotlight -->
-           <div class="employees">
+            <div class="employees">
                 <div class="bd-example">
                     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                       <h2><i>Employee Spotlight</i></h2>
@@ -113,7 +119,8 @@
                       </a>
                     </div>
                   </div> <!-- END OF CAROUSEL SECTION -->
-            </div> <!-- END OF EMPLOYEE -->        </section> <!-- END OF ABOUT US SECTION -->
+            </div> <!-- END OF EMPLOYEE -->
+        </section> <!-- END OF ABOUT US SECTION -->
     </div> <!-- END OF ABOUT US DIV -->
     <br>
     <section id="contact" class="container">
@@ -121,7 +128,7 @@
         <form>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@mail.com">
+                <input type="email" class="form-control email-field" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@mail.com">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
@@ -148,6 +155,8 @@
             </div>
         </footer>
     </section> <!-- END OF FOOTER SECTION -->
+
+    <!-- BOOTSTRAP AND POPPER -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -155,6 +164,6 @@
     <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous">
     </script>
     <!-- javascript -->
-    <script src="./js/app.js"></script>    
+    <script src="js/app.js"></script>
 </body>
 </html>
